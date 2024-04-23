@@ -17,6 +17,19 @@ function secondHighest(arr) {
 
   // Find the maximum element in the filtered array (second-highest)
   let secondMax = Math.max(...filteredArr);
-
+ 
   return secondMax;
 }
+
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+readline.question('', input => {
+  const arr = input.split(' ').map(Number);
+  const result = secondHighest(arr); // Corrected function call to secondHighest
+  console.log(result);
+
+  readline.close();
+});  
