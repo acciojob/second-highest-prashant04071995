@@ -27,9 +27,9 @@ const readline = require('readline').createInterface({
 });
 
 readline.question('', input => {
-  const arr = input.split(' ').map(Number);
-  const result = secondHighest(arr); // Corrected function call to secondHighest
+  const arr = JSON.parse(input); // Parse the input as JSON to get an array directly
+  const result = secondHighest(arr);
   console.log(result);
 
   readline.close();
-});  
+}); 
